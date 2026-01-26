@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vista 360 Grados</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3b82f6", // A nice blue that matches typical link colors, though not strictly used as a solid block here
+                        "background-light": "#ffffff",
+                        "background-dark": "#111827",
+                        "card-light": "#f3f4f6",
+                        "card-dark": "#1f2937",
+                        "text-light": "#1f2937",
+                        "text-dark": "#f9fafb",
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display min-h-screen flex flex-col transition-colors duration-300">
+<header class="relative w-full h-[400px] md:h-[500px] overflow-hidden group">
+<img alt="Large colorful San Miguel sign in a plaza" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjJBPw1-h38NOzh628ApmpWj0RiFSo8MAHJx1OeGJFVwyuP-wEF7jp8QxaygMHA950-4yNsp6PFpvUCoM1mrKlxc-NpME2K73Tz8x3jpiKby3hT36X4IMbxmGPFVHwpZceJYfPhDwf7Gy1v93cE-XctOAAffrkJe_8gIL1wY0nZVQgLrYGqiNa8lYI7gmodVJhuFEk9Z4w_yFh_6L1EHtmavM42QvNORokAYSEmarEVyPhzFzZSXOawc0dDtHGPyVkkib0-6AvAlG1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10"></div>
+<button class="absolute top-6 left-6 bg-white/30 backdrop-blur-sm hover:bg-white/50 text-white p-2 rounded-full transition-all duration-300 shadow-lg dark:bg-black/30 dark:hover:bg-black/50">
+<span class="material-icons text-2xl">arrow_back</span>
+</button>
+<div class="absolute bottom-8 right-8 md:bottom-12 md:right-12">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg tracking-wide">
+                Vista 360 grados
+            </h1>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 py-12 md:px-8 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-full aspect-[16/9] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-gray-200 dark:bg-gray-700">
+<img alt="White church building with a cross, casa de la cultura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8S1tFlMSKs3GRK4zNaj58iIUP54ZAGEy_wkozqF6HasZQ3DI3obu_5TPHVO90-epqGoQDb0D7zOEOZoUREjpyrbEwGdmEvamYdAmZrC0HLnKTL_wfOvt8N4W7BJV3voB7sVnW0U3wElNr8YSFFZs5fzNQHMux_0Dat7JZcMKn6T67pbVDnAiIPNH5JM_g0IDHv908n2wPVGiQ99o2gUSLmmaCzEBeJjxFbwHv_aX5bp3RgtllpCRPX5YTz5n65bINHGvHvzbr4LjH"/>
+</div>
+<h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
+                    casa de la cultura
+                </h2>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-full aspect-[16/9] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-gray-200 dark:bg-gray-700">
+<img alt="Interior museum display with artifacts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjGJodIk4C4Eu81SghkcW_Fl8Uc_27kGk6KWK5J7yp1EmRz4wHW78ym7NoWjAFjKPcgE5ihL6NVR5321dQB-0dsysS5UDGAwzvxQb-OZeyyp46IkkK-dBt58msgj7retdbbIQgplcIAOSCjjscanxTWR_iK4cwV3YVRPvHSK1_JcHnKEdxX557CX_Fa2fbib86azuo0NBQDhnWa3Yw0MZnpXRzqaPmjGZPeB5hLUvoOsMz4asuKvgCfPnlMx6bGukREX4NAayUCXJX"/>
+</div>
+<h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
+                    lugar de ejemplo
+                </h2>
+</div>
+<div class="flex flex-col items-center group cursor-pointer">
+<div class="w-full aspect-[16/9] overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-gray-200 dark:bg-gray-700">
+<img alt="Entrance to community museum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_19b52IMYLFum84IykGg_T1GQjaHttZhI8AYtrDoG2bhjasepKvl82LUwyenaDYnMasksmbT_7RXLbfGgQBQ3YUWUktXQOXq0TZqs6RzS2WL8_hoV3lNK2AyDe3l8_boBXac7bIU-GAd9GPDalA4-mcHWWhTtd-nLH0kJroJ0gKfy6FVaOZHFAq5M6zYhSTUwErY4Mf1y_hl8yLfqkrtY1vK99mUVEPF_BWl3X2aYcpKDqQU06Y-9aQRCMfw7RHdav4ffS_uOecfr"/>
+</div>
+<h2 class="mt-4 text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-primary transition-colors">
+                    lugar de ejemplo
+                </h2>
+</div>
+<div class="flex flex-col items-center group cursor-pointer animate-pulse">
+<div class="w-full aspect-[16/9] bg-gray-300 dark:bg-gray-700 rounded-xl shadow-sm"></div>
+</div>
+<div class="flex flex-col items-center group cursor-pointer animate-pulse">
+<div class="w-full aspect-[16/9] bg-gray-300 dark:bg-gray-700 rounded-xl shadow-sm"></div>
+</div>
+<div class="flex flex-col items-center group cursor-pointer animate-pulse">
+<div class="w-full aspect-[16/9] bg-gray-300 dark:bg-gray-700 rounded-xl shadow-sm"></div>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+<div class="container mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
+            © 2023 San Miguel Zapotitlán. Todos los derechos reservados.
+        </div>
+</footer>
+
+</body></html>

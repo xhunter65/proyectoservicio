@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Casa de la Cultura Yoreme</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",// nos acabo de dar una salvadota
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6", // Blue from the image borders
+              "background-light": "#f8fafc", // Very light gray
+              "background-dark": "#1e293b", // Slate 800
+              "card-light": "#ffffff",
+              "card-dark": "#334155", // Slate 700
+              "text-light": "#1e293b", // Slate 800
+              "text-dark": "#e2e8f0", // Slate 200
+              "text-muted-light": "#64748b", // Slate 500
+              "text-muted-dark": "#94a3b8", // Slate 400
+            },
+            fontFamily: {
+              display: ["Roboto", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem", // 16px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .material-icons {
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="w-full max-w-5xl mx-auto">
+<header class="relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute inset-x-0 top-0 h-2 bg-primary"></div>
+<img alt="Exterior view of the purple Casa de la Cultura Yoreme building" class="w-full h-64 md:h-80 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYkDNLpiQGKqz4PKku4P7ql0TIv2cmlz2BSu9Nhgdevcd2ukWGWLoYqg35v6ITj7Xsc05qLCvGzFvEkWTYpLDjw3yNt4JMp4CBVvVV3yA9IOv3SCNauoAJ4o5pQpdAcpxowoesNTghOLM4HtzUwttPopXaza1rxjnYQrn_ab8JcK8qPG_H0yJCJeq57YWL2YBzjEvyUx0gE0hHwESeJIWjxiD1jkcn89RFCRpjRwS0XhDASfwUPdM2kCXeBtSxvdqe9HV5VIaEAlZD"/>
+<div class="absolute inset-x-0 bottom-0 h-2 bg-primary"></div>
+<div class="absolute top-4 left-4 flex space-x-2">
+<button class="bg-white/30 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/50 transition-colors">
+<span class="material-icons text-xl leading-none">arrow_back</span>
+</button>
+<button class="bg-white/30 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/50 transition-colors">
+<span class="material-icons text-xl leading-none">home</span>
+</button>
+</div>
+<h1 class="absolute bottom-8 left-0 right-0 text-center text-white text-4xl md:text-5xl font-bold" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                Casa de la cultura yoreme
+            </h1>
+</header>
+<main class="py-12 px-4 md:px-8">
+<section class="text-center max-w-2xl mx-auto mb-16">
+<p class="text-lg text-text-muted-light dark:text-text-muted-dark">
+                    La casa de la cultura yoreme es el punto cultural principal y más importante de la comunidad de san miguel Zapotitlán
+                </p>
+</section>
+<section class="mb-16">
+<div class="bg-card-light dark:bg-card-dark p-6 md:p-8 rounded-2xl shadow-lg flex flex-col items-center">
+<div class="relative w-full max-w-xl">
+<img alt="Altar with a statue of Saint Michael Archangel and banners reading 'Los Mayos Yoremes'" class="rounded-lg w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKwIf-6hV9ooB-ZBfZRKPVEZIOLHvyYmvDo4OFoA4aT18BcrxzDBAQEVJ-4J7PlLqFLa-hpBpk-eQJ8nKQPCokl_Kk_s378lAM6jr40KbWbSZ9DaDkJVUEBm34HTB0UBGFiAjI1rGxSjsAw_7PCvAUX-b-6E3PZg65fWs1lWOk2fvCtzVbUZDL5WNVkCnwirN4MZNyyHhOmWOlc-fpW-1ld3TQf9g4lp-J3S1V_aAtdhXQRBF47gq6D3D4ayRviKjOPcoZk6qjuuoQ"/>
+<button class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-200/50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-200 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+<span class="material-icons text-2xl leading-none">chevron_left</span>
+</button>
+<button class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-200/50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-200 p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+<span class="material-icons text-2xl leading-none">chevron_right</span>
+</button>
+</div>
+<div class="text-center mt-6 max-w-2xl">
+<h2 class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">La historia de San Miguel de Arcangel</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                            La casa de la cultura es hogar de variedad de eventos culturales como lo son 
+                        </p>
+</div>
+</div>
+</section>
+<section class="flex flex-col items-center">
+<div class="w-full max-w-xl h-80 rounded-full overflow-hidden mb-8 shadow-lg" style="clip-path: circle(50% at 50% 50%);">
+<img alt="Map showing the location of the cultural center" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMCxjXE_IDfAApe3J-m5SqfO6EmC_ivFO_sMgn1cdh_oD626enbBCbVbdI_QoOQbqx43CofWVRivHYVWqkPd2JK4FYhPecwhmJUlAymLDC5Dham7gzVQo-rcFE39uNaIdl2ANiOkXo66Z25XgohzGg5J0h2xCcCN5aotp8ThLHBMp2M4VGyA_x-jJpYpls11Lm7B823m6iimdlEZnX2H64ZmHF3qNlo2tjc6XUZ1CbCPDCEO7a9u1HtP8sNwZzI5-FzU0A8J0kQL6q"/>
+</div>
+<button class="bg-card-light dark:bg-card-dark text-text-light dark:text-text-dark font-medium py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-600">
+                    Abrir en Google Maps
+                </button>
+</section>
+</main>
+</div>
+
+</body></html>
