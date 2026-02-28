@@ -1,125 +1,400 @@
-<!DOCTYPE html>
-<html class="scroll-smooth" lang="es"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>San Miguel Zapotitlán</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#0ea5e9", // sky-500 from Tailwind's palette, as seen in the image
-            "background-light": "#ffffff",
-            "background-dark": "#18181b", // zinc-900
-            "text-light": "#18181b",
-            "text-dark": "#f4f4f5", // zinc-100
-            "card-light": "#f4f4f5", // zinc-100
-            "card-dark": "#27272a", // zinc-800
-            "placeholder-light": "#d4d4d8", // zinc-300
-            "placeholder-dark": "#3f3f46", // zinc-700
-          },
-          fontFamily: {
-            display: ["Roboto", "sans-serif"],
-          },
-          borderRadius: {
-            DEFAULT: "0.75rem", // 12px
+<!doctype html>
+<html class="scroll-smooth" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>San Miguel Zapotitlán</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0ea5e9",
+              "background-light": "#ffffff",
+              "background-dark": "#18181b",
+              "text-light": "#18181b",
+              "text-dark": "#f4f4f5",
+              "card-light": "#f4f4f5",
+              "card-dark": "#27272a",
+            },
+            fontFamily: {
+              display: ["Roboto", "sans-serif"],
+            },
           },
         },
-      },
-    };
-  </script>
-<style type="text/tailwindcss">
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24
-    }
-  </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
-<div class="min-h-screen">
-<header class="bg-primary w-full h-4 fixed top-0 z-30"></header>
-<main>
-<section class="relative h-screen w-full flex items-end justify-start text-white overflow-hidden">
-<div class="absolute inset-0">
-<img alt="Arco de bienvenida a San Miguel Zapotitlán" class="w-full h-full object-cover" src="https://alairenoticias.com.mx/wp-content/uploads/2023/04/2.jpg"/>
-<div class="absolute inset-0 bg-black/40"></div>
-</div>
-<div class="relative z-10 p-8 md:p-16 max-w-3xl">
-<h1 class="text-5xl md:text-7xl font-black text-shadow">San Miguel Zapotitlán</h1>
-<p class="mt-4 text-lg md:text-xl max-w-xl text-shadow">También conocido como San Miguel Arcangel fue fundado por el Padre Vicente Águila el di...</p>
-</div>
-<div class="absolute top-8 left-8 z-20">
-<button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-colors">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<div class="absolute top-1/2 -translate-y-1/2 left-8 z-20 hidden md:block">
-<button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-colors">
-<span class="material-symbols-outlined">arrow_back_ios_new</span>
-</button>
-</div>
-<div class="absolute top-1/2 -translate-y-1/2 right-8 z-20 hidden md:block">
-<button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-colors">
-<span class="material-symbols-outlined">arrow_forward_ios</span>
-</button>
-</div>
-<div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
-<span class="block w-2.5 h-2.5 bg-white rounded-full"></span>
-<span class="block w-2.5 h-2.5 bg-white/50 rounded-full"></span>
-<span class="block w-2.5 h-2.5 bg-white/50 rounded-full"></span>
-<span class="block w-2.5 h-2.5 bg-white/50 rounded-full"></span>
-<span class="block w-2.5 h-2.5 bg-white/50 rounded-full"></span>
-</div>
-</section>
-<section class="py-16 md:py-24 px-4 md:px-8">
-<div class="max-w-7xl mx-auto">
-<h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Lugares emblemáticos</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-<img alt="La Iglesia Indígena con su fachada blanca y campanas" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_Ht6gNeRB9X8aZ30fqpvcgNoEDoDhDElgSF_EPUuoeMXP_15DxT8oq3CkgD7R7ibIfCtQUqc1EWFw0JnyQ9WF_V3mO31VQqs12bmbr3p10LyFuKL6sdBoyr-ZvfPUN3O8qpvzoMENql8SrfFNHU5Cufhxv-L7USAD95lTiwrztxdvtNc64eJo3EO9c2eA2bJWIc34zCaMI2c2KZuvX_Pk76iDQhsrOC2-bMA4YrH3IiCA13hy1CAIInFvQ_zHd4krkmkTgw0AZIU"/>
-<div class="p-4">
-<h3 class="font-semibold text-center text-text-light dark:text-text-dark">La Iglesia Indígena</h3>
-</div>
-</div>
-<div class="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-<img alt="Interior de La Casa de la Cultura con instrumentos musicales y artesanías" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxc3ngU3T2HR-hr2w67TP-FPc6-fupSlsD9qvRKuPctNvgfrWatC4WZ9XyneItrHWXQIaRENObAB9rPegLjWdEImL5ZujDk5IB_MmgIvpcG_kD3UBIyHQhC35PcNeltz5F6flvmyJhn90DaVtK6EeGnT3mbrp6afs5kFX3wGPBOK90BzMpJo3LetppKv6N1Jt7EjdYWHt4SlTgkf9SMHroolIVJ5lZX3dzdKPytkuwxeDl1oitGcj2ud56b02guzTM_dF4ae4GIPY"/>
-<div class="p-4">
-<h3 class="font-semibold text-center text-text-light dark:text-text-dark">La Casa de la cultura</h3>
-</div>
-</div>
-<div class="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden shadow-lg transition-transform hover:-translate-y-1">
-<img alt="Fachada del Museo Comunitario con un letrero verde" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpt7XujhZH_q2K8fjijQsoNV5JsH2xd-maLPrDQod4pKai3fcZMU6nYzcWvGfzXpCa7NC76NiqhqMFJYAp-HAHjEgZBCnv2_EntnuBGUJErvaZHPSv07tgmUXL-YrSSDB9VEqRG4rgJUwLGnB3ssBODVeTIZaMm46xll2_gmwItbSkAMJycqmXGVs-rhqIRfTvpcJTKxbY9xd3uIp_XUbY2lZCLnQv7i38lfITiOLcAf9d8A5EtsvuonAK8r9PNJfB242lCu7fLZ0"/>
-<div class="p-4">
-<h3 class="font-semibold text-center text-text-light dark:text-text-dark">Museo Comunitario</h3>
-</div>
-</div>
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-</div>
-</div>
-</section>
-<section class="py-16 md:py-24 px-4 md:px-8 bg-card-light dark:bg-card-dark">
-<div class="max-w-7xl mx-auto">
-<h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Eventos</h2>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-<div class="bg-placeholder-light dark:bg-placeholder-dark rounded-lg h-60"></div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-primary w-full h-4 mt-16"></footer>
-</div>
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .no-scroll {
+        overflow: hidden;
+      }
 
-</body></html>
+      /* LÓGICA DE DESLIZAMIENTO DEL CARRUSEL */
+      .carousel-item {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(100%);
+      }
+      .carousel-item.active {
+        transform: translateX(0);
+        z-index: 10;
+      }
+      .carousel-item.prev-hidden {
+        transform: translateX(-100%);
+        z-index: 0;
+      }
+
+      /* CURSOR PARA EL BOTÓN */
+      #open-menu {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark"
+  >
+    <div class="min-h-screen">
+      <header class="bg-primary w-full h-4 fixed top-0 z-40"></header>
+
+      <div
+        id="side-menu"
+        class="fixed inset-0 z-[60] invisible transition-all duration-300"
+      >
+        <div
+          id="menu-overlay"
+          class="absolute inset-0 bg-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+        ></div>
+        <div
+          id="menu-panel"
+          class="absolute left-0 top-0 h-full w-full max-w-sm bg-white dark:bg-zinc-900 shadow-2xl p-8 flex flex-col items-center -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto"
+        >
+          <button
+            id="close-menu"
+            class="absolute top-8 left-8 bg-white dark:bg-zinc-800 shadow-lg hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-full p-2 transition-all active:scale-95"
+          >
+            <span
+              class="material-symbols-outlined text-gray-600 dark:text-white"
+              >arrow_back_ios_new</span
+            >
+          </button>
+          <div class="mt-20 w-full flex flex-col gap-5 text-center">
+            <button
+              class="w-full bg-white dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 py-6 px-4 rounded-[2rem] shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex flex-col items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-4xl font-bold"
+                >help</span
+              >
+              <span class="font-medium">Acerca de San Miguel Zapotitlán</span>
+            </button>
+            <button
+              onclick="window.location.href = 'imagen360.html'"
+              class="w-full bg-white dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 py-6 px-4 rounded-[2rem] shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex flex-col items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-4xl">language</span>
+              <span class="font-medium">Visitar Zonas en 360 grados</span>
+            </button>
+            <button
+              class="w-full bg-white dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 py-6 px-4 rounded-[2rem] shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex flex-col items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-4xl">translate</span>
+              <div class="text-center">
+                <p class="font-medium">Cambiar idioma</p>
+                <p class="text-sm text-blue-500 font-bold">Español → Yoreme</p>
+              </div>
+            </button>
+            <button
+              class="w-full bg-white dark:bg-zinc-800 border border-gray-100 dark:border-zinc-700 py-6 px-4 rounded-[2rem] shadow-sm hover:shadow-md transition-all active:scale-[0.98] flex flex-col items-center gap-2"
+            >
+              <span class="material-symbols-outlined text-4xl"
+                >location_on</span
+              >
+              <span class="font-medium">Ubicaciones</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <section
+          id="hero-carousel"
+          class="relative h-screen w-full flex items-end justify-start text-white overflow-hidden"
+        >
+          <div id="carousel-inner" class="absolute inset-0 z-0">
+            <div class="carousel-item active">
+              <img
+                alt="Arco de bienvenida"
+                class="w-full h-full object-cover"
+                src="https://alairenoticias.com.mx/wp-content/uploads/2023/04/2.jpg"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Danzante Yoreme"
+                class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1599739291060-4578e77dac5d?auto=format&fit=crop&q=80&w=1920"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Iglesia San Miguel"
+                class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1548588627-f9785d147334?auto=format&fit=crop&q=80&w=1920"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Artesanías"
+                class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1590371391605-cb6760b3a3b1?auto=format&fit=crop&q=80&w=1920"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                alt="Río y Paisaje"
+                class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&q=80&w=1920"
+              />
+            </div>
+          </div>
+
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+          <div class="absolute top-6 left-6 z-50">
+            <button
+              id="open-menu"
+              class="flex items-center justify-center bg-white/30 hover:bg-white/40 backdrop-blur-md rounded-full w-20 h-20 text-white transition-all active:scale-95 shadow-2xl border border-white/20 touch-manipulation"
+            >
+              <span
+                class="material-symbols-outlined text-4xl pointer-events-none"
+              >
+                menu
+              </span>
+            </button>
+          </div>
+
+          <div class="absolute inset-y-0 left-8 z-30 flex items-center">
+            <button
+              id="prev-slide"
+              class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-colors active:scale-90"
+            >
+              <span class="material-symbols-outlined text-2xl"
+                >arrow_back_ios_new</span
+              >
+            </button>
+          </div>
+          <div class="absolute inset-y-0 right-8 z-30 flex items-center">
+            <button
+              id="next-slide"
+              class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 text-white transition-colors active:scale-90"
+            >
+              <span class="material-symbols-outlined text-2xl"
+                >arrow_forward_ios</span
+              >
+            </button>
+          </div>
+
+          <div class="relative z-20 p-8 md:p-16 max-w-3xl mb-8">
+            <h1 class="text-5xl md:text-7xl font-black text-shadow uppercase">
+              San Miguel Zapotitlán
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-xl text-shadow font-light">
+              Historia Viva y Tradición Ancestral en cada rincón.
+            </p>
+          </div>
+
+          <div
+            id="carousel-indicators"
+            class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2"
+          >
+            <button
+              class="indicator w-2.5 h-2.5 bg-white rounded-full transition-all opacity-100"
+              data-index="0"
+            ></button>
+            <button
+              class="indicator w-2.5 h-2.5 bg-white rounded-full transition-all opacity-40 hover:opacity-70"
+              data-index="1"
+            ></button>
+            <button
+              class="indicator w-2.5 h-2.5 bg-white rounded-full transition-all opacity-40 hover:opacity-70"
+              data-index="2"
+            ></button>
+            <button
+              class="indicator w-2.5 h-2.5 bg-white rounded-full transition-all opacity-40 hover:opacity-70"
+              data-index="3"
+            ></button>
+            <button
+              class="indicator w-2.5 h-2.5 bg-white rounded-full transition-all opacity-40 hover:opacity-70"
+              data-index="4"
+            ></button>
+          </div>
+        </section>
+
+        <section class="py-20 px-8 text-center bg-card-light dark:bg-card-dark">
+          <h2 class="text-3xl font-bold mb-10">Explora la cultura</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div
+              class="h-64 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-4 shadow-sm"
+            >
+              <p class="text-gray-600 dark:text-zinc-400">
+                Contenido sobre la Iglesia Indígena
+              </p>
+            </div>
+            <div
+              class="h-64 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-4 shadow-sm"
+            >
+              <p class="text-gray-600 dark:text-zinc-400">
+                Contenido sobre la Casa de la Cultura
+              </p>
+            </div>
+            <div
+              class="h-64 bg-zinc-100 dark:bg-zinc-800 rounded-2xl flex items-center justify-center p-4 shadow-sm"
+            >
+              <p class="text-gray-600 dark:text-zinc-400">
+                Contenido sobre el Museo Comunitario
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // --- LÓGICA DEL MENÚ ---
+      const sideMenu = document.getElementById("side-menu");
+      const menuPanel = document.getElementById("menu-panel");
+      const menuOverlay = document.getElementById("menu-overlay");
+      const openMenuBtn = document.getElementById("open-menu");
+      const closeMenuBtn = document.getElementById("close-menu");
+
+      function toggleMenu(isOpen) {
+        if (isOpen) {
+          sideMenu.classList.remove("invisible");
+          document.body.classList.add("no-scroll");
+          setTimeout(() => {
+            menuOverlay.classList.replace("opacity-0", "opacity-100");
+            menuPanel.classList.replace("-translate-x-full", "translate-x-0");
+          }, 10);
+        } else {
+          menuOverlay.classList.replace("opacity-100", "opacity-0");
+          menuPanel.classList.replace("translate-x-0", "-translate-x-full");
+          document.body.classList.remove("no-scroll");
+          setTimeout(() => sideMenu.classList.add("invisible"), 300);
+        }
+      }
+
+      openMenuBtn.addEventListener("click", () => toggleMenu(true));
+      closeMenuBtn.addEventListener("click", () => toggleMenu(false));
+      menuOverlay.addEventListener("click", () => toggleMenu(false));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggleMenu(false);
+      });
+
+      // --- LÓGICA DEL CARRUSEL EN BUCLE ---
+      const items = document.querySelectorAll(".carousel-item");
+      const indicators = document.querySelectorAll(".indicator");
+      const nextBtn = document.getElementById("next-slide");
+      const prevBtn = document.getElementById("prev-slide");
+      let currentIndex = 0;
+      let timer;
+
+      function moveSlide(nextIndex) {
+        const isNext =
+          nextIndex > currentIndex ||
+          (currentIndex === items.length - 1 && nextIndex === 0);
+        if (currentIndex === 0 && nextIndex === -1) isNext = false;
+
+        const actualNext = (nextIndex + items.length) % items.length;
+
+        items.forEach((item, i) => {
+          item.classList.remove("active", "prev-hidden");
+          item.style.transition = "none";
+
+          if (i === actualNext) {
+            item.style.transform = isNext
+              ? "translateX(100%)"
+              : "translateX(-100%)";
+            setTimeout(() => {
+              item.style.transition =
+                "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+              item.classList.add("active");
+              item.style.transform = "translateX(0)";
+            }, 10);
+          } else if (i === currentIndex) {
+            item.style.transition =
+              "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+            item.classList.add("prev-hidden");
+            item.style.transform = isNext
+              ? "translateX(-100%)"
+              : "translateX(100%)";
+          } else {
+            item.style.transform = isNext
+              ? "translateX(100%)"
+              : "translateX(-100%)";
+          }
+        });
+
+        currentIndex = actualNext;
+        updateIndicators();
+      }
+
+      function updateIndicators() {
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle("opacity-100", i === currentIndex);
+          dot.classList.toggle("opacity-40", i !== currentIndex);
+        });
+      }
+
+      function startTimer() {
+        timer = setInterval(() => moveSlide(currentIndex + 1), 5000);
+      }
+
+      nextBtn.addEventListener("click", () => {
+        clearInterval(timer);
+        moveSlide(currentIndex + 1);
+        startTimer();
+      });
+      prevBtn.addEventListener("click", () => {
+        clearInterval(timer);
+        moveSlide(currentIndex - 1);
+        startTimer();
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          if (i !== currentIndex) {
+            clearInterval(timer);
+            moveSlide(i);
+            startTimer();
+          }
+        });
+      });
+
+      startTimer();
+    </script>
+  </body>
+</html>
