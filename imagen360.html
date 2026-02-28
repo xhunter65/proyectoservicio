@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vista 360 - San Miguel Zapotitlán</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            primary: '#0d7ff2',
+          },
+          borderRadius: {
+            'custom': '8px',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes pulse-soft {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+    .hotspot-pulse {
+      animation: pulse-soft 2s infinite ease-in-out;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style data-purpose="viewer-layout">
+    #main-viewer {
+      height: 70vh;
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+    .viewer-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.6) 100%);
+    }
+  </style>
+</head>
+<body class="bg-white text-zinc-900 font-sans antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center pointer-events-none">
+<div class="pointer-events-auto bg-white/80 backdrop-blur-md border border-zinc-200 px-4 py-2 rounded-custom shadow-sm">
+<h1 class="text-xl font-extrabold tracking-tight text-zinc-900">San Miguel Zapotitlán</h1>
+<p class="text-[10px] text-zinc-500 uppercase tracking-[0.2em] font-bold">Sinaloa, México</p>
+</div>
+<div class="pointer-events-auto bg-white/80 backdrop-blur-md border border-zinc-200 px-4 py-2 rounded-custom shadow-sm">
+<button class="p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full hover:bg-primary transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-full hover:bg-zinc-800 transition-colors">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: 360ViewerSection -->
+<main class="w-full relative group" id="main-viewer">
+<!-- 360 Image Background -->
+<img alt="Vista 360 grados San Miguel Zapotitlán" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGIdefBqaAGXYwVvTM-eHGx-MCATVNjw8TYbHtA-DFx_ZAWkLwoR18SH7DJaDD6iuGPT0W-8LaFCGGcJ3_KVKyq9KqASs0KPu72ja7Xww2Jbc9z1QT_S6OoW3PD5lD452bgDmOlvSgtCZ7u5uc8bYspg6dnrztFO9_gcNoXB_O0qgBe8cPnTy41pDdfG_i8Po_Y803-10qo0ewXscUerU27GNeb8HaC0mg8BuuHdBYhsEfRomMzyIeUv5MS6ZRBrjRf08NcIIl7J8"/>
+<!-- Viewer Interaction Overlays -->
+<div class="absolute inset-0 viewer-overlay pointer-events-none"></div>
+<!-- Interactive Hotspots -->
+<div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 group/hotspot pointer-events-auto cursor-pointer" onclick="toggleInfo('casa')">
+<div class="w-6 h-6 bg-primary rounded-full hotspot-pulse flex items-center justify-center border-2 border-white shadow-lg">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div class="absolute top-8 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded border border-white/20 whitespace-nowrap opacity-0 group-hover/hotspot:opacity-100 transition-opacity">
+        Casa de la Cultura
+      </div>
+</div>
+<div class="absolute top-1/3 right-1/4 -translate-x-1/2 -translate-y-1/2 group/hotspot pointer-events-auto cursor-pointer" onclick="toggleInfo('museo')">
+<div class="w-6 h-6 bg-primary rounded-full hotspot-pulse flex items-center justify-center border-2 border-white shadow-lg">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+<div class="absolute top-8 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded border border-white/20 whitespace-nowrap opacity-0 group-hover/hotspot:opacity-100 transition-opacity">
+        Museo Comunitario
+      </div>
+</div>
+<!-- UI: Compass -->
+<div class="absolute top-24 right-8 w-16 h-16 pointer-events-auto flex items-center justify-center">
+<div class="relative w-full h-full border border-white/20 rounded-full flex items-center justify-center bg-black/20 backdrop-blur-sm">
+<div class="text-[10px] font-bold absolute top-1">N</div>
+<div class="w-0.5 h-8 bg-gradient-to-t from-transparent via-primary to-transparent"></div>
+</div>
+</div>
+<!-- UI: Navigation Controls Bottom Left -->
+<div class="absolute bottom-8 left-8 flex flex-col gap-4 pointer-events-auto">
+<div class="flex items-center gap-3 bg-black/40 backdrop-blur-md p-2 rounded-custom border border-white/10">
+<button class="p-2 hover:text-primary transition-colors"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<input class="w-24 accent-primary" max="100" min="0" type="range" value="50"/>
+<button class="p-2 hover:text-primary transition-colors"><svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+</div>
+</div>
+<!-- UI: VR & Fullscreen Bottom Right -->
+<div class="absolute bottom-8 right-8 flex gap-3 pointer-events-auto">
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-white font-bold rounded-custom hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        VER EN VR
+      </button>
+<button class="p-3 bg-black/40 backdrop-blur-md border border-white/10 rounded-custom hover:bg-zinc-800 transition-colors">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Floating Info Panel (Hidden by default) -->
+<div class="absolute bottom-24 left-1/2 -translate-x-1/2 w-full max-w-lg bg-white shadow-2xl border border-zinc-200 p-6 rounded-custom translate-y-full opacity-0 transition-all duration-300 pointer-events-none z-50" id="info-panel">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-primary" id="info-title">Nombre del Lugar</h3>
+<button class="text-zinc-500 hover:text-white" onclick="closeInfo()">
+<svg class="h-5 w-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+<p class="text-zinc-600 text-sm leading-relaxed font-medium" id="info-desc">Información detallada sobre este punto de interés cultural.</p>
+</div>
+</main>
+<!-- END: 360ViewerSection -->
+<!-- BEGIN: RelatedLocations -->
+<section class="py-16 px-6 lg:px-12 bg-white">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="text-3xl font-extrabold text-zinc-900 tracking-tight">Explora Lugares Cercanos</h2>
+<p class="text-zinc-500 mt-2 font-medium">Descubre otros puntos de interés en San Miguel Zapotitlán</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 border border-zinc-200 rounded-full hover:bg-zinc-100 transition-colors text-zinc-900">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="p-2 border border-zinc-200 rounded-full hover:bg-zinc-100 transition-colors text-zinc-900">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<!-- Gallery Carousel -->
+<div class="flex gap-6 overflow-x-auto hide-scrollbar pb-6">
+<!-- Card 1 -->
+<div class="min-w-[300px] group cursor-pointer">
+<div class="relative overflow-hidden rounded-custom aspect-video mb-3">
+<img alt="Casa de la Cultura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPqEDaV5hxTtVp0eVuzim8bg1S6MhDfABNw30rXfTmUCCBzXIjBEcJgypU_iSpvfdaq2-RqFMlohzoKaUSwT9zaOJ_F57QHxG-YjYRWyNWIasZSoNGl8lgrmSVGCtaM8NSIk_z_YV1CXEk5F7P-JGNO6NhVPv6JHmwhq5vxxDr3Esn6zv_2HKFSiaQPwlknfXs-rYjUBSYST4B19D2Z0QoRh56_YNjul1QF9eUSKqQXE1osm3UmlOr_1m35BDpBVo6VVn3yilc_1M"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-xs font-bold bg-primary px-3 py-1 rounded-full">ENTRAR 360</span>
+</div>
+</div>
+<h4 class="font-bold text-zinc-900 group-hover:text-primary transition-colors">Casa de la Cultura</h4>
+<p class="text-xs text-zinc-400 font-medium">A 200m de tu ubicación</p>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[300px] group cursor-pointer">
+<div class="relative overflow-hidden rounded-custom aspect-video mb-3">
+<img alt="Museo Comunitario" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAroMwbNioJxxwLn7ajk0i0WQvf8x_EukvWPdOHEgyVXuhwFn1aayUPHkq1az0i0V1VZfk7I-g8uyfeixe6wXORZ14p0pM9BEjaQYN7y3vAmsdEZ-0nv5hyvtPpdCy9Yo3r_UdmUH0x9zo0xp3_QoAPtZuxRtMn2TliWWgi04JD3Im7LgS1gtiAp15M0ogE5NT98ex3V5eG5qszYjothhk2--C_SX5OQziFozgfxFrwvoeUTj-WZ4sdqATBR_kxQ1ThTni02BfZbGk"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-xs font-bold bg-primary px-3 py-1 rounded-full">ENTRAR 360</span>
+</div>
+</div>
+<h4 class="font-bold text-zinc-900 group-hover:text-primary transition-colors">Museo Comunitario</h4>
+<p class="text-xs text-zinc-400 font-medium">A 450m de tu ubicación</p>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[300px] group cursor-pointer">
+<div class="relative overflow-hidden rounded-custom aspect-video mb-3">
+<div class="w-full h-full bg-zinc-800 flex items-center justify-center">
+<svg class="h-12 w-12 text-zinc-700" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h4 class="font-bold text-zinc-900 group-hover:text-primary transition-colors">Plaza Principal</h4>
+<p class="text-xs text-zinc-400 font-medium">Próximamente</p>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[300px] group cursor-pointer">
+<div class="relative overflow-hidden rounded-custom aspect-video mb-3">
+<div class="w-full h-full bg-zinc-800 flex items-center justify-center">
+<svg class="h-12 w-12 text-zinc-700" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h4 class="font-bold text-zinc-900 group-hover:text-primary transition-colors">Iglesia de San Miguel</h4>
+<p class="text-xs text-zinc-400 font-medium">Próximamente</p>
+</div>
+</div>
+</section>
+<!-- END: RelatedLocations -->
+<!-- BEGIN: Footer -->
+<footer class="bg-zinc-50 border-t border-zinc-200 py-12 px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center font-bold text-white text-xs">V</div>
+<span class="text-sm font-bold text-zinc-900 tracking-wider">VISITA MÉXICO 360</span>
+</div>
+<nav class="flex gap-8">
+<a class="text-xs text-zinc-500 hover:text-zinc-900 font-semibold transition-colors" href="#">Términos</a>
+<a class="text-xs text-zinc-500 hover:text-zinc-900 font-semibold transition-colors" href="#">Privacidad</a>
+<a class="text-xs text-zinc-500 hover:text-zinc-900 font-semibold transition-colors" href="#">Contacto</a>
+</nav>
+<div class="text-xs text-zinc-400 font-medium">
+      © 2023 San Miguel Zapotitlán Digital Heritage.
+    </div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="ui-handlers">
+    function toggleInfo(key) {
+      const panel = document.getElementById('info-panel');
+      const title = document.getElementById('info-title');
+      const desc = document.getElementById('info-desc');
+      
+      const content = {
+        'casa': {
+          title: 'Casa de la Cultura',
+          desc: 'Un espacio dedicado a preservar las tradiciones Yoreme y promover las artes locales. Aquí se imparten talleres de danza, música autóctona y artesanías.'
+        },
+        'museo': {
+          title: 'Museo Comunitario',
+          desc: 'El Museo Comunitario resguarda piezas arqueológicas, vestimentas tradicionales y documentos históricos que narran la evolución de San Miguel Zapotitlán.'
+        }
+      };
+
+      if (content[key]) {
+        title.innerText = content[key].title;
+        desc.innerText = content[key].desc;
+        panel.classList.remove('translate-y-full', 'opacity-0', 'pointer-events-none');
+        panel.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      }
+    }
+
+    function closeInfo() {
+      const panel = document.getElementById('info-panel');
+      panel.classList.add('translate-y-full', 'opacity-0', 'pointer-events-none');
+      panel.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    }
+
+    // Close panel on outside click (simple version)
+    window.addEventListener('click', function(e) {
+      const panel = document.getElementById('info-panel');
+      const hotspots = document.querySelectorAll('.group\\/hotspot');
+      let isHotspotClick = false;
+      hotspots.forEach(h => { if(h.contains(e.target)) isHotspotClick = true; });
+      
+      if (!panel.contains(e.target) && !isHotspotClick) {
+        closeInfo();
+      }
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>
